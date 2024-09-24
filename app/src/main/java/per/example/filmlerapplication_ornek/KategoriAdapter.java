@@ -61,4 +61,5 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.CardTa
     public int getItemCount() {
         return kategorilerList.size();
     }
+
 }

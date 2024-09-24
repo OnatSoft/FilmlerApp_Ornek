@@ -24,9 +24,10 @@ public class FilmlerDao {
                     ,c.getString(c.getColumnIndexOrThrow("kategori_ad")));
 
             Filmler f = new Filmler(c.getInt(c.getColumnIndexOrThrow("film_id"))
-                    ,c.getString(c.getColumnIndexOrThrow("film_ad"))
-                    ,c.getInt(c.getColumnIndexOrThrow("film_yil"))
-                    ,c.getString(c.getColumnIndexOrThrow("film_resim")),k,y);
+                    , c.getString(c.getColumnIndexOrThrow("film_ad"))
+                    , c.getInt(c.getColumnIndexOrThrow("film_yil"))
+                    , c.getString(c.getColumnIndexOrThrow("film_resim"))
+                    , c.getString(c.getColumnIndexOrThrow("film_aciklama")), k, y);
             filmlerArrayList.add(f);
         }
 

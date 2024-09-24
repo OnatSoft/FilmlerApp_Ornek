@@ -16,24 +16,25 @@ public class DBConnection extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS \"kategoriler\" (\n" +
                 "\t\"kategori_id\"\tINTEGER,\n" +
-                "\t\"kategori_Ad\"\tTEXT,\n" +
+                "\t\"kategori_ad\"\tTEXT,\n" +
                 "\tPRIMARY KEY(\"kategori_id\" AUTOINCREMENT)\n" + ")");
 
         db.execSQL("CREATE TABLE IF NOT EXISTS \"yonetmenler\" (\n" +
                 "\t\"yonetmen_id\"\tINTEGER,\n" +
-                "\t\"yonetmen_Ad\"\tTEXT,\n" +
+                "\t\"yonetmen_ad\"\tTEXT,\n" +
                 "\tPRIMARY KEY(\"yonetmen_id\" AUTOINCREMENT)\n" + ")");
 
         db.execSQL("CREATE TABLE IF NOT EXISTS \"filmler\" (\n" +
                 "\t\"film_id\"\tINTEGER,\n" +
-                "\t\"film_Ad\"\tTEXT,\n" +
-                "\t\"film_Yil\"\tINTEGER,\n" +
-                "\t\"film_Resim\"\tTEXT,\n" +
+                "\t\"film_ad\"\tTEXT,\n" +
+                "\t\"film_yil\"\tINTEGER,\n" +
+                "\t\"film_resim\"\tTEXT,\n" +
+                "\t\"film_aciklama\"\tTEXT,\n" +
                 "\t\"kategori_id\"\tINTEGER,\n" +
                 "\t\"yonetmen_id\"\tINTEGER,\n" +
-                "\tPRIMARY KEY(\"film_id\" AUTOINCREMENT),\n" +
+                "\tFOREIGN KEY(\"kategori_id\") REFERENCES \"kategoriler\"(\"kategoril_id\"),\n" +
                 "\tFOREIGN KEY(\"yonetmen_id\") REFERENCES \"yonetmenler\"(\"yonetmen_id\"),\n" +
-                "\tFOREIGN KEY(\"kategori_id\") REFERENCES \"kategoriler\"(\"kategoril_id\")\n" + ")");
+                "\tPRIMARY KEY(\"film_id\" AUTOINCREMENT)\n" + ")");
     }
 
     @Override

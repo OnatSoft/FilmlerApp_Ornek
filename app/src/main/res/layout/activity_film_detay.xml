@@ -38,11 +38,23 @@
         android:layout_marginTop="8dp"
         android:text="Inception"
         android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFilmAciklama" />
+
+    <TextView
+        android:id="@+id/txtFilmAciklama"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lorem ipsum odor amet, consectetuer adipiscing elit. Mus malesuada semper sollicitudin posuere lacus cubilia sagittis porta etiam. Vivamus adipiscing conubia per cubilia penatibus. Nisl aliquet neque hac nunc et cubilia orci porta. Dui in et dapibus sem convallis nascetur integer eros. Volutpat nulla justo luctus ullamcorper cubilia. Nullam felis lacus lectus; parturient maecenas purus. Blandit primis facilisi eget eros aptent sed morbi. Velit leo dui senectus tristique porttitor."
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFilmYil" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/txtFilmYil"
@@ -56,5 +68,19 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFilmAd" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Özeti"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFilmYil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
